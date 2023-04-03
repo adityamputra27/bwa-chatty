@@ -1,3 +1,4 @@
+import 'package:bwa_chatty/pages/message_page.dart';
 import 'package:bwa_chatty/theme.dart';
 import 'package:bwa_chatty/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: blueColor,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const MessagePage()),
+          );
+        },
         backgroundColor: greenColor,
         child: const Icon(
           Icons.add,
@@ -75,14 +81,28 @@ class HomePage extends StatelessWidget {
                         imageURL: 'assets/images/3.png',
                         name: 'Inda Melinda',
                         text: 'I saw it clearly and mig...',
-                        time: '02:30',
+                        time: '12:30',
                         unread: false,
                       ),
                       const ChatTile(
                         imageURL: 'assets/images/4.png',
-                        name: 'Muhammad Rafly El Quraish',
+                        name: 'Marcus Rashford',
                         text: 'A lonely road, crossed another ...',
-                        time: '02:30',
+                        time: '11:39',
+                        unread: false,
+                      ),
+                      const ChatTile(
+                        imageURL: 'assets/images/2.png',
+                        name: 'Harry Maguire',
+                        text: 'Sorry, you`re not my ty...',
+                        time: '10:21',
+                        unread: true,
+                      ),
+                      const ChatTile(
+                        imageURL: 'assets/images/3.png',
+                        name: 'Deni Herdiana',
+                        text: 'A lonely road, crossed another ...',
+                        time: '09:25',
                         unread: false,
                       ),
                       const SizedBox(
